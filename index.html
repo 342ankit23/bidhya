@@ -40,7 +40,7 @@ section.active {
 
 /* Responsive Headings */
 h1 {
-  font-size: clamp(1.5em, 6vw, 2.4em); /* responsive font size */
+  font-size: clamp(1.5em, 6vw, 2.4em); 
   margin-bottom: 10px;
   word-wrap: break-word;
   text-align: center;
@@ -85,6 +85,16 @@ video.content {
   box-shadow: 0 0 20px rgba(255,255,255,0.5);
 }
 
+/* Emoji overlay */
+.emoji-overlay {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(1.5em, 5vw, 2em);
+  pointer-events: none;
+}
+
 /* Timer */
 #timer {
   font-size: 3em;
@@ -109,7 +119,7 @@ video.content {
 
 /* PAGE5 text customization */
 #page5-text {
-  color: red;
+  color: green;
   font-size: clamp(0.9em, 3vw, 1em);
   line-height: 1.5em;
   padding: 10px 20px;
@@ -148,21 +158,27 @@ video.content {
 </section>
 
 <!-- PAGE 2 -->
-<section id="page2" style="background-image:url(secondpage.jpeg);">
+<section id="page2" style="background-image:url(secondpage.jpeg); position: relative;">
 <h1>Happy birthday sweetheart ❤️</h1>
 <p>
 Many many happy returns of the day my precious love ❤️
 Aaja bata balla timi 17 barsha ma lageu😅Aaba aaja bata ma sanga dherai nakarauni maile kai pugauna sakena bhane bhani risauni haina huss mero sanee.
 </p>
+<!-- Emoji overlay -->
+<div class="emoji-overlay">🎉❤️💖</div>
+
 <button onclick="showPage('page3')">Your First Surprise 🎁</button>
 </section>
 
 <!-- PAGE 3 -->
-<section id="page3" style="background-image:url(thirdpage.jpeg);">
+<section id="page3" style="background-image:url(thirdpage.jpeg); position: relative;">
 <h1>Here’s Something Special 🎥😂</h1>
 <video controls class="content">
   <source src="entertainmentvideo.mp4" type="video/mp4">
 </video>
+<!-- Emoji overlay -->
+<div class="emoji-overlay">😂🎉💖</div>
+
 <button onclick="showPage('page4')">Next Gift 🎀</button>
 </section>
 
@@ -214,22 +230,15 @@ function showPage(pageId) {
   page.style.display = "flex";
   setTimeout(() => page.classList.add("active"), 10);
 
-  // Background music logic
   const music = document.getElementById('bgMusic');
   const musicBtn = document.getElementById('musicBtn');
 
   if (pageId === 'page1' || pageId === 'page5') {
-    if (music.paused) {
-      music.play().catch(() => {});
-      if (musicBtn) musicBtn.textContent = '🔇 Pause Music';
-    }
-    if (musicBtn) musicBtn.style.display = 'inline-block';
+    if (music.paused) { music.play().catch(() => {}); }
+    if (musicBtn) { musicBtn.textContent = '🔇 Pause Music'; musicBtn.style.display='inline-block'; }
   } else {
-    if (!music.paused) {
-      music.pause();
-      if (musicBtn) musicBtn.textContent = '🔊 Play Music';
-    }
-    if (musicBtn) musicBtn.style.display = 'none';
+    if (!music.paused) { music.pause(); }
+    if (musicBtn) { musicBtn.textContent = '🔊 Play Music'; musicBtn.style.display='none'; }
   }
 }
 
@@ -263,8 +272,7 @@ function startFastCountdown() {
     } else {
       let fakeMins = 50 + Math.floor((step / totalSteps) * 10);
       let fakeSecs = Math.floor((step / totalSteps) * 60) % 60;
-      timerDisplay.textContent =
-        `11:${fakeMins.toString().padStart(2, '0')}:${fakeSecs.toString().padStart(2, '0')}`;
+      timerDisplay.textContent = `11:${fakeMins.toString().padStart(2,'0')}:${fakeSecs.toString().padStart(2,'0')}`;
       step++;
     }
   }, 1000);
@@ -282,8 +290,9 @@ function createHearts() {
 }
 
 setInterval(createHearts, 700);
+
+// Start countdown
 startFastCountdown();
 </script>
-
 </body>
 </html>
