@@ -38,8 +38,9 @@ section.active {
   opacity: 1;
 }
 
+/* Responsive Headings */
 h1 {
-  font-size: clamp(1.5em, 6vw, 2.4em);
+  font-size: clamp(1.5em, 6vw, 2.4em); /* responsive font size */
   margin-bottom: 10px;
   word-wrap: break-word;
   text-align: center;
@@ -76,27 +77,12 @@ video.bgvideo {
 }
 
 /* Content Video */
-.video-wrapper {
-  position: relative;
-  display: inline-block;
-  margin: 20px 0;
-}
 video.content {
   width: 80%;
   max-width: 500px;
   border: 5px solid #fff;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(255,255,255,0.5);
-}
-
-/* Emoji overlay */
-.emoji-overlay {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: clamp(1.5em, 5vw, 2em);
-  pointer-events: none;
 }
 
 /* Timer */
@@ -121,9 +107,9 @@ video.content {
   100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
 }
 
-/* PAGE5 text */
+/* PAGE5 text customization */
 #page5-text {
-  color: green;
+  color: re;
   font-size: clamp(0.9em, 3vw, 1em);
   line-height: 1.5em;
   padding: 10px 20px;
@@ -151,6 +137,7 @@ video.content {
 <audio id="bgMusic" loop>
   <source src="Ed Sheeran - Perfect.mp3" type="audio/mp3">
 </audio>
+
 <div>
   <h1>Countdown to My sweetie Birthday 🎂</h1>
   <div id="timer">Loading...</div>
@@ -164,38 +151,27 @@ video.content {
 <section id="page2" style="background-image:url(secondpage.jpeg);">
 <h1>Happy birthday sweetheart ❤️</h1>
 <p>
-Many many happy returns of the day my precious love ❤️ Aaja bata balla timi 17 barsha ma lageu😅Aaba aaja bata ma sanga dherai nakarauni maile kai pugauna sakena bhane bhani risauni haina huss mero sanee.
+Many many happy returns of the day my precious love ❤️
+Aaja bata balla timi 17 barsha ma lageu😅Aaba aaja bata ma sanga dherai nakarauni maile kai pugauna sakena bhane bhani risauni haina huss mero sanee.
 </p>
-<div class="video-wrapper">
-  <video controls class="content">
-    <source src="firstpage.mp4" type="video/mp4">
-  </video>
-  <div class="emoji-overlay">🎉❤️💖</div>
-</div>
 <button onclick="showPage('page3')">Your First Surprise 🎁</button>
 </section>
 
 <!-- PAGE 3 -->
 <section id="page3" style="background-image:url(thirdpage.jpeg);">
 <h1>Here’s Something Special 🎥😂</h1>
-<div class="video-wrapper">
-  <video controls class="content">
-    <source src="entertainmentvideo.mp4" type="video/mp4">
-  </video>
-  <div class="emoji-overlay">😂🎉💖</div>
-</div>
+<video controls class="content">
+  <source src="entertainmentvideo.mp4" type="video/mp4">
+</video>
 <button onclick="showPage('page4')">Next Gift 🎀</button>
 </section>
 
 <!-- PAGE 4 -->
 <section id="page4" style="background-image:url(Lastpage.jpeg);">
 <h1>Another Surprise Awaits 🎬</h1>
-<div class="video-wrapper">
-  <video controls class="content">
-    <source src="birthdayvideo.mp4" type="video/mp4">
-  </video>
-  <div class="emoji-overlay">🎂💖🎶</div>
-</div>
+<video controls class="content">
+  <source src="birthdayvideo.mp4" type="video/mp4">
+</video>
 <button onclick="showPage('page5')">Final Message 💖</button>
 </section>
 
@@ -203,11 +179,26 @@ Many many happy returns of the day my precious love ❤️ Aaja bata balla timi 
 <section id="page5" style="background-image:url(Lastpage.jpeg);">
 <h1>Happy Birthday, My Forever 🌈</h1>
 <div id="page5-text">
-Happy birthday My princess ❤️‍🩹😘👸
-<br><br>
+Happy birthday My princess ❤️‍🩹😘👸<br><br>
 Since 2078 hamro pahilo bhet bhayo which was already scripted by god.<br>
 Teti bela hami bich dherai imperfection le garda hami dherai aak aarka ko huna sakenam.<br>
-... (all your text continues here) ...
+Tra bhaninxa ni je huna lekhexa tyo bhyerai xadxa bhane jastai hamro 9 ko last.<br>
+Last ma feri bolna suru garem suru bolda tw dherai hami bich imperfections haru they.<br>
+Tra hami deutai ho maya le garda tini Sab impurities haru hate.<br>
+Last ma hami rw hamro sambhandha ma maya nai maya badhdai gayo jasle garda hami.<br>
+Aaja ya xam maile aajai pani hami perfect xam bhandena tra din katdai jada hami ni perfect hudai xam.<br>
+Hamro sambandha ma kunai badha aaye pani hami deu jana jo milera aagi badnexam tesma malai pura bharosha xa.<br>
+Hamro patients le yo sambhandha bf gf bata buda budi samma hunexa.<br>
+Timi hami deu jana aak aarka ko lagi jati je je garna sakxam tyo gardai aayeka xam rw aaunepani xam.<br>
+Babyyy aaba hera mero rw timro sapana bhane ko ramro quality life sanga.<br>
+Timi deuta sangai bihe garera settle garni ho tesko lagi timle pani har manna huna rw maile ni har manna huna.<br>
+Babyyy atlast yeti bhanxu hami jasto je situation aaye ni sangai huni yo hera babyyy.<br>
+Timro mero dimag le je soxhe ni nature le hamlai ek thau ma lya xa hera tw 8 ma tetro jagada bhayera xuthiyo hamro sambhanda.<br>
+Kasari feri jodiyo tei bhayera sanee hamle har jindagi namanam.<br>
+Maile pani timro harek paila na sath sahayog timlai emotional support garney xuu bhandai.<br>
+At last I love you mero parad mero pentuuu mero sanee❤️❤️💐💐😘❤️.<br>
+Eh sachi birthday hai Mero pukuliee ko aaja ma bhane k k lekhira😂.<br>
+Happy birthday prettiest princess ever exists ❤️❤️💐💐💐💐. Malai aaapakai aasha xa aaja bata ris kam hunexa 😆
 </div>
 </section>
 
@@ -223,15 +214,22 @@ function showPage(pageId) {
   page.style.display = "flex";
   setTimeout(() => page.classList.add("active"), 10);
 
+  // Background music logic
   const music = document.getElementById('bgMusic');
   const musicBtn = document.getElementById('musicBtn');
 
   if (pageId === 'page1' || pageId === 'page5') {
-    if (music.paused) music.play().catch(()=>{});
-    if (musicBtn) { musicBtn.textContent='🔇 Pause Music'; musicBtn.style.display='inline-block'; }
+    if (music.paused) {
+      music.play().catch(() => {});
+      if (musicBtn) musicBtn.textContent = '🔇 Pause Music';
+    }
+    if (musicBtn) musicBtn.style.display = 'inline-block';
   } else {
-    if (!music.paused) music.pause();
-    if (musicBtn) { musicBtn.textContent='🔊 Play Music'; musicBtn.style.display='none'; }
+    if (!music.paused) {
+      music.pause();
+      if (musicBtn) musicBtn.textContent = '🔊 Play Music';
+    }
+    if (musicBtn) musicBtn.style.display = 'none';
   }
 }
 
@@ -239,8 +237,13 @@ function showPage(pageId) {
 function toggleMusic() {
   const music = document.getElementById('bgMusic');
   const btn = document.getElementById('musicBtn');
-  if (music.paused) { music.play().catch(()=>{}); btn.textContent='🔇 Pause Music'; }
-  else { music.pause(); btn.textContent='🔊 Play Music'; }
+  if (music.paused) {
+    music.play().catch(() => {});
+    btn.textContent = '🔇 Pause Music';
+  } else {
+    music.pause();
+    btn.textContent = '🔊 Play Music';
+  }
 }
 
 // Countdown
@@ -249,36 +252,38 @@ const message = document.getElementById("birthdayMessage");
 const nextBtn = document.getElementById("nextBtn1");
 
 function startFastCountdown() {
-  let totalSteps=10, step=0;
-  let interval = setInterval(()=>{
-    if(step>=totalSteps){
+  let totalSteps = 10;
+  let step = 0;
+  let interval = setInterval(() => {
+    if (step >= totalSteps) {
       clearInterval(interval);
-      timerDisplay.style.display="none";
-      message.style.display="block";
-      nextBtn.style.display="inline-block";
+      timerDisplay.style.display = "none";
+      message.style.display = "block";
+      nextBtn.style.display = "inline-block";
     } else {
-      let fakeMins=50+Math.floor((step/totalSteps)*10);
-      let fakeSecs=Math.floor((step/totalSteps)*60)%60;
-      timerDisplay.textContent=`11:${fakeMins.toString().padStart(2,'0')}:${fakeSecs.toString().padStart(2,'0')}`;
+      let fakeMins = 50 + Math.floor((step / totalSteps) * 10);
+      let fakeSecs = Math.floor((step / totalSteps) * 60) % 60;
+      timerDisplay.textContent =
+        `11:${fakeMins.toString().padStart(2, '0')}:${fakeSecs.toString().padStart(2, '0')}`;
       step++;
     }
-  },1000);
+  }, 1000);
 }
 
 // Floating hearts
 function createHearts() {
   const heart = document.createElement('div');
   heart.classList.add('heart');
-  heart.textContent='💖';
-  heart.style.left=Math.random()*100+'vw';
-  heart.style.fontSize=(Math.random()*20+20)+'px';
+  heart.textContent = '💖';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
   document.getElementById('page5').appendChild(heart);
-  setTimeout(()=>heart.remove(),6000);
+  setTimeout(() => heart.remove(), 6000);
 }
-setInterval(createHearts,700);
 
-// Start countdown
+setInterval(createHearts, 700);
 startFastCountdown();
 </script>
+
 </body>
 </html>
